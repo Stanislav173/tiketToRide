@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Stanislav173/tiketToRide#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
     "pg": "^8.8.0"
   }
 }

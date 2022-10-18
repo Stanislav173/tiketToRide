@@ -4,6 +4,3 @@ Player = class Player {
     this.color = color;
   }
 };
-
-let player1 = new Player("stas", "red")
-console.log(player1)
