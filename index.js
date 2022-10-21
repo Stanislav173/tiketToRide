@@ -7,23 +7,23 @@ const map = require('./src/routes/mapRouter')
 const admin = require('./src/routes/adminRouter')
 
 
+app.set("view engine", "hbs");
 
+//app.use('/static', express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 app.use('/player', player);
 app.use('/map', map);
 app.use('/admin', admin);
 
-app.use(express.static('public'));
+//const routes = require('');
+//app.use('/', routes);
 
-const handlebars = exphbs.create({ extname: '.hbs',});
-app.engine('.hbs', handlebars.engine);
-app.set('view engine', '.hbs');
+
+
+
+
 
 app.listen(3333, () => {
     console.log('Application listening on port 3333!');
 });
-//1 отображать html
-//2 подружить с бд
-//3 СОЗДАТЬ КЛАССЫ
-//4 создать таблицы по классам
-//5 создать норм админку
