@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/name', function (req, res) {
-  //controller
-  res.send('Some map');
+router.post('/upload', function (req, res) {
+  req.files.image.mv('public/images/'+req.files.image.name);
+  console.log(req.files.image); // the uploaded file object;
 })
 
 

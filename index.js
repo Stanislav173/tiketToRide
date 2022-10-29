@@ -1,6 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars')
 const app = express();
+const fileUpload = require('express-fileupload');
 
 const player = require('./src/routes/playerRouter')
 const map = require('./src/routes/mapRouter')
@@ -11,6 +12,7 @@ app.set("view engine", "hbs");
 
 //app.use('/static', express.static('public'));
 app.use(express.static(__dirname + '/public'));
+app.use(fileUpload({}));
 
 app.use('/player', player);
 app.use('/map', map);
